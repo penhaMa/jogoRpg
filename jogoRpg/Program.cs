@@ -17,23 +17,25 @@ namespace jogoRpg
 
             Console.WriteLine($"Bem-vindo, {nomePersonagem}!");
 
-            int pontosVida = 100;
-            int pontosAtaque = 10;
-            int pontosDefesa = 5;
+            int pontosVida = 0;
+            int pontosAtaque = 0;
+            int pontosDefesa = 0;
 
             int pontosExperiencia = 0;
             int nivel = 1;
             int experienciaNecessaria = 100;
 
-            bool jogadorVivo = true;
+            bool escolhaClasse = true;
 
-            while (jogadorVivo)
+            while (escolhaClasse)
             {
                 Console.WriteLine();
                 Console.WriteLine("Opções:");
-                Console.WriteLine("1 - Explorar a masmorra");
-                Console.WriteLine("2 - Ver status do personagem");
-                Console.WriteLine("3 - Sair do jogo");
+                Console.WriteLine("1 - Mago");
+                Console.WriteLine("2 - Arqueiro");
+                Console.WriteLine("3 - Guerreiro");
+                Console.WriteLine("4 - Jogar");
+                Console.WriteLine("5 - Sair do jogo");
                 Console.Write("Escolha uma opção: ");
 
                 string escolha = Console.ReadLine();
@@ -43,22 +45,38 @@ namespace jogoRpg
                 switch (escolha)
                 {
                     case "1":
-                        Console.WriteLine("Você está explorando a masmorra...");
-                        Combate(ref pontosVida, ref pontosExperiencia, ref nivel, ref pontosAtaque, ref pontosDefesa);
+                        Console.WriteLine($"Status do personagem - {nomePersonagem}:");
+                        Console.WriteLine($"Nível: {nivel}");
+                        Console.WriteLine($"Experiência: {pontosExperiencia}/{experienciaNecessaria}");
+                        Console.WriteLine($"Pontos de Vida: {pontosVida = 120}");
+                        Console.WriteLine($"Pontos de Ataque: {pontosAtaque = 5}");
+                        Console.WriteLine($"Pontos de Defesa: {pontosDefesa = 7}");
                         break;
 
                     case "2":
                         Console.WriteLine($"Status do personagem - {nomePersonagem}:");
                         Console.WriteLine($"Nível: {nivel}");
                         Console.WriteLine($"Experiência: {pontosExperiencia}/{experienciaNecessaria}");
-                        Console.WriteLine($"Pontos de Vida: {pontosVida}");
-                        Console.WriteLine($"Pontos de Ataque: {pontosAtaque}");
-                        Console.WriteLine($"Pontos de Defesa: {pontosDefesa}");
+                        Console.WriteLine($"Pontos de Vida: {pontosVida = 110}");
+                        Console.WriteLine($"Pontos de Ataque: {pontosAtaque = 10}");
+                        Console.WriteLine($"Pontos de Defesa: {pontosDefesa = 10}");
                         break;
 
                     case "3":
+                        Console.WriteLine($"Status do personagem - {nomePersonagem}:");
+                        Console.WriteLine($"Nível: {nivel}");
+                        Console.WriteLine($"Experiência: {pontosExperiencia}/{experienciaNecessaria}");
+                        Console.WriteLine($"Pontos de Vida: {pontosVida = 100}");
+                        Console.WriteLine($"Pontos de Ataque: {pontosAtaque = 15}");
+                        Console.WriteLine($"Pontos de Defesa: {pontosDefesa = 15}");
+                        break;
+                    case "4":
+                        Console.Clear();
+                        Continuar();
+                        break;
+                    case "5":
                         Console.WriteLine("Obrigado por jogar!");
-                        jogadorVivo = false;
+                        escolhaClasse = false;
                         break;
 
                     default:
@@ -66,44 +84,126 @@ namespace jogoRpg
                         break;
                 }
             }
-
             Console.WriteLine("Pressione qualquer tecla para sair...");
             Console.ReadKey();
+
+            void Continuar()
+            {
+                bool jogadorVivo = true;
+
+                while (jogadorVivo)
+                {
+                    Console.WriteLine();
+                    Console.WriteLine("Opções:");
+                    Console.WriteLine("1 - Explorar Masmorra");
+                    Console.WriteLine("2 - Ver status do personagem");
+                    Console.WriteLine("3 - Voltar");
+                    Console.Write("Escolha uma opção: ");
+
+                    string escolha = Console.ReadLine();
+
+                    Console.WriteLine();
+
+                    switch (escolha)
+                    {
+                        case "1":
+                            Console.Clear();
+                            Console.WriteLine("Você está explorando a Masmorra...");
+                            Combate(ref pontosVida, ref pontosExperiencia, ref nivel, ref pontosAtaque, ref pontosDefesa);
+                            break;
+
+                        case "2":
+                            Console.Clear();
+                            Console.WriteLine($"Status do personagem - {nomePersonagem}:");
+                            Console.WriteLine($"Nível: {nivel}");
+                            Console.WriteLine($"Experiência: {pontosExperiencia}/{experienciaNecessaria}");
+                            Console.WriteLine($"Pontos de Vida: {pontosVida}");
+                            Console.WriteLine($"Pontos de Ataque: {pontosAtaque}");
+                            Console.WriteLine($"Pontos de Defesa: {pontosDefesa}");
+                            break;
+
+                        case "3":
+                            Console.Clear();
+                            Console.WriteLine("Obrigado por jogar!");
+                            jogadorVivo = false;
+                            break;
+
+                        default:
+                            Console.WriteLine("Opção inválida! Escolha novamente.");
+                            break;
+                    }
+                }
+            }
         }
 
         static void Combate(ref int pontosVida, ref int pontosExperiencia, ref int nivel, ref int pontosAtaque, ref int pontosDefesa)
         {
             List<string> nomes = new List<string>()
         {
-            "João",
-            "Maria",
-            "Pedro",
-            "Ana",
-            "Lucas",
-            "Mariana",
-            "Roberto",
-            "Gobilim",
-            "Rogerio",
-            "Roma",
-            "Jesus",
-            "Deus",
-            "Demonio",
-            "Satan"
+            "Diablo",
+            "The Lich King",
+            "Zeus ",
+            "Ridley ",
+            "Dr. Robotnik",
+            "Lavos",
+            "The Illusive Man",
+            "Vergil",
+            "Ornstein and Smough",
+            "Vaas Montenegro",
+            "The Butcher",
+            "Nemesis",
+            "Ardyn Izunia",
+            "General Raam",
+            "Medusa",
+            "The Nameless King",
+            "King K. Rool",
+            "Gruntilda",
+            "Kefka",
+            "Andrew Ryan",
+            "Gwyn, Lord of Cinder",
+            "The Master Chief",
+            "The Boss",
+            "M. Bison",
+            "King Dedede",
+            "Mother Brain",
+            "Psycho Mantis",
+            "Zeus",
+            "Lord Gwyn",
+            "Ganondorf",
+            "Bowser Jr.",
+            "Artorias the Abysswalker",
+            "Liquid Snake",
+            "The Reaper",
+            "The Witch King",
+            "Ultimecia",
+            "Mysterio",
+            "Sin",
+            "Albert Wesker",
+            "Shang Tsung",
+            "The White Witch",
+            "General Shepherd",
+            "Saren Arterius",
+            "The Sorrow",
+            "El Gigante",
+            "The Overlord",
+            "Malthael",
+            "Shadow Queen",
+            "Dark Samus",
+            "Alduin"
         };
-
             Random random = new Random();
             // Escolhe um nome aleatório da lista
             string nomeAleatorio = nomes[random.Next(nomes.Count)];
-            int inimigoVida = random.Next(50, 101);
-            int inimigoAtaque = random.Next(5, 11);
-            int inimigoDefesa = random.Next(2, 6);
+            int inimigoVida = random.Next(90, 101);
+            int inimigoAtaque = random.Next(5, 17);
+            int inimigoDefesa = random.Next(2, 13);
 
             Console.WriteLine($"{nomeAleatorio} apareceu!");
             Console.WriteLine($"Vida do inimigo: {inimigoVida}");
             Console.WriteLine($"Ataque: {inimigoAtaque}");
             Console.WriteLine($"Defesa: {inimigoDefesa}");
 
-            bool combateAtivo = true;
+                bool combateAtivo = true;
 
             while (combateAtivo)
             {
@@ -162,22 +262,19 @@ namespace jogoRpg
                                 switch (escolhaEvolucao)
                                 {
                                     case "1":
-                                        Console.WriteLine("\nDigite o quanto de dano você deseja dar: ");
-                                        pontosAtaque = Convert.ToInt32(Console.ReadLine());
+                                        pontosAtaque += 10;
                                         Console.WriteLine($"Seus pontos de ataque aumentaram para {pontosAtaque}.");
                                         break;
 
                                     case "2":
-                                        Console.WriteLine("\nDigite o quanto de defesa você deseja ter: ");
-                                        pontosDefesa = Convert.ToInt32(Console.ReadLine());
+                                        pontosDefesa += 7; 
                                         Console.WriteLine($"Seus pontos de defesa aumentaram para {pontosDefesa}.");
                                         break;
                                     case "3":
-                                        Console.WriteLine("\nDigite o quanto de dano você deseja dar: ");
-                                        pontosAtaque = Convert.ToInt32(Console.ReadLine());
+                                        pontosAtaque += 4; 
                                         Console.WriteLine($"Seus pontos de ataque aumentaram para {pontosAtaque}.");
-                                        Console.WriteLine("\nDigite o quanto de defesa você deseja ter: ");
-                                        pontosDefesa = Convert.ToInt32(Console.ReadLine());
+
+                                        pontosDefesa += 3;
                                         Console.WriteLine($"Seus pontos de defesa aumentaram para {pontosDefesa}.");
                                         break;
 
