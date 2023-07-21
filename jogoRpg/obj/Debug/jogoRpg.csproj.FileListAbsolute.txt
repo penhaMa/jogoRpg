@@ -6,3 +6,11 @@ C:\Users\penha\source\repos\jogoRpg\jogoRpg\obj\Debug\jogoRpg.csproj.SuggestedBi
 C:\Users\penha\source\repos\jogoRpg\jogoRpg\obj\Debug\jogoRpg.csproj.CoreCompileInputs.cache
 C:\Users\penha\source\repos\jogoRpg\jogoRpg\obj\Debug\jogoRpg.exe
 C:\Users\penha\source\repos\jogoRpg\jogoRpg\obj\Debug\jogoRpg.pdb
+C:\Users\marcel.rmpenha\source\repos\jogoRpg\jogoRpg\bin\Debug\jogoRpg.exe.config
+C:\Users\marcel.rmpenha\source\repos\jogoRpg\jogoRpg\bin\Debug\jogoRpg.exe
+C:\Users\marcel.rmpenha\source\repos\jogoRpg\jogoRpg\bin\Debug\jogoRpg.pdb
+C:\Users\marcel.rmpenha\source\repos\jogoRpg\jogoRpg\obj\Debug\jogoRpg.csproj.AssemblyReference.cache
+C:\Users\marcel.rmpenha\source\repos\jogoRpg\jogoRpg\obj\Debug\jogoRpg.csproj.SuggestedBindingRedirects.cache
+C:\Users\marcel.rmpenha\source\repos\jogoRpg\jogoRpg\obj\Debug\jogoRpg.csproj.CoreCompileInputs.cache
+C:\Users\marcel.rmpenha\source\repos\jogoRpg\jogoRpg\obj\Debug\jogoRpg.exe
+C:\Users\marcel.rmpenha\source\repos\jogoRpg\jogoRpg\obj\Debug\jogoRpg.pdb

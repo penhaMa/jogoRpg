@@ -37,6 +37,7 @@ namespace jogoRpg
                 Console.Write("Escolha uma opção: ");
 
                 string escolha = Console.ReadLine();
+                Console.Clear();
 
                 Console.WriteLine();
 
@@ -114,6 +115,7 @@ namespace jogoRpg
                 Console.Write("Escolha uma opção: ");
 
                 string escolhaCombate = Console.ReadLine();
+                Console.Clear();
 
                 Console.WriteLine();
 
@@ -152,32 +154,29 @@ namespace jogoRpg
                                 Console.WriteLine($"Seus pontos de ataque aumentaram para {pontosAtaque}, seus pontos de defesa aumentaram para {pontosDefesa} e seus pontos de vida aumentaram para {pontosVida}.");
 
                                 Console.WriteLine("Escolha como deseja evoluir:");
-                                Console.WriteLine("1 - Aumentar Ataque");
-                                Console.WriteLine("2 - Aumentar Defesa");
-                                Console.WriteLine("3 - Aumentar Defesa e Ataque");
+                                Console.WriteLine("1 - Aumentar Ataque(5)");
+                                Console.WriteLine("2 - Aumentar Defesa(7)");
+                                Console.WriteLine("3 - Aumentar Ataque e Defesa(5 e 7)");
                                 Console.Write("Escolha uma opção: ");
 
                                 string escolhaEvolucao = Console.ReadLine();
+                                Console.Clear();
 
                                 switch (escolhaEvolucao)
                                 {
                                     case "1":
-                                        Console.WriteLine("\nDigite o quanto de dano você deseja dar: ");
-                                        pontosAtaque = Convert.ToInt32(Console.ReadLine());
+                                        pontosAtaque += 5;
                                         Console.WriteLine($"Seus pontos de ataque aumentaram para {pontosAtaque}.");
                                         break;
 
                                     case "2":
-                                        Console.WriteLine("\nDigite o quanto de defesa você deseja ter: ");
-                                        pontosDefesa = Convert.ToInt32(Console.ReadLine());
+                                        pontosDefesa += 7;
                                         Console.WriteLine($"Seus pontos de defesa aumentaram para {pontosDefesa}.");
                                         break;
                                     case "3":
-                                        Console.WriteLine("\nDigite o quanto de dano você deseja dar: ");
-                                        pontosAtaque = Convert.ToInt32(Console.ReadLine());
+                                        pontosAtaque += 5;
                                         Console.WriteLine($"Seus pontos de ataque aumentaram para {pontosAtaque}.");
-                                        Console.WriteLine("\nDigite o quanto de defesa você deseja ter: ");
-                                        pontosDefesa = Convert.ToInt32(Console.ReadLine());
+                                        pontosDefesa += 7;
                                         Console.WriteLine($"Seus pontos de defesa aumentaram para {pontosDefesa}.");
                                         break;
 
